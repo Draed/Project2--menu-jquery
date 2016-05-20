@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Application métier (projet 12)</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="jquery.js"></script>
+  <script language="JavaScript" type="text/javascript" src="javascript.js"></script>
+  <!-- thanks to daneden -->
+  <!-- https://github.com/daneden/animate.css -->
+
+  <link rel="stylesheet" href="animate.min.css">
+</head>
+<body>
+	<div id="showblocmenu" onmouseenter="showblocmenu(blocmenu)"><div id="rotatetext">show</div></div>
+	<div id="blocmenu">
+		<center>
+		<div id="bloc1" onmouseover="mouseoverbloc(bloc1)" onmouseout="mouseoutbloc(bloc1)">Menu 1   <img src="arrow.png" id="arrow1" alt="arrow" height="22" width="22"> </div>
+		<div id="bloc2" onmouseover="mouseoverbloc(bloc2)" onmouseout="mouseoutbloc(bloc2)">Menu 2   <img src="arrow.png" id="arrow2" alt="arrow" height="22" width="22"></div>
+		<div id="bloc3" onmouseover="mouseoverbloc(bloc3)" onmouseout="mouseoutbloc(bloc3)">Menu 3   <img src="arrow_last.png" id="arrow2" alt="arrow" height="22" width="22"></div>
+		<button id="close" onclick="hideblocmenu(blocmenu)"><img src="arrow_left.png" id="arrow4" alt="arrow" height="22" width="22">close</button>
+	</center>
+	</div>
+	<div id="blocapplication">
+		<iframe id="MyIFrame"></iframe>
+		<div id="innerblocapplication">
+			<div id="app1" class="app" onmouseenter="backgroundlessblur(backgroundapp1)" onmouseleave="backgroundmoreblur(backgroundapp1)" onclick="iframe1(innerblocapplication)">facebook</div>
+			<div class="app" id="backgroundapp1"></div>
+
+			<div id="app2" class="app" onmouseenter="backgroundlessblur(backgroundapp2)" onmouseleave="backgroundmoreblur(backgroundapp2)" onclick="iframe2(innerblocapplication)">Weather</div>
+			<div class="app" id="backgroundapp2"></div>
+
+			<div id="app3" class="app" onmouseenter="backgroundlessblur(backgroundapp3)" onmouseleave="backgroundmoreblur(backgroundapp3)" onclick="iframe3(innerblocapplication)">Mail</div>
+			<div class="app" id="backgroundapp3"></div>
+
+			<div id="app4" class="app" onmouseenter="backgroundlessblur(backgroundapp4)" onmouseleave="backgroundmoreblur(backgroundapp4)" onclick="iframe4(innerblocapplication)">Calendar</div>
+			<div class="app" id="backgroundapp4"></div>
+
+			<div id="app5" class="app" >app5</div>
+			<div id="app6" class="app" >app6</div>
+			<div id="app7" class="app" >app7</div>
+		</div>
+	</div>
+	<button id="back" onclick="backtoapplication(innerblocapplication)">Back</button>
+</body>
+</html>
